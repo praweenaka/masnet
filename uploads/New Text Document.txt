@@ -1,0 +1,47 @@
+ <?php
+                                    $sql = "select * from view_userpermission where username='" . $_SESSION['UserName'] . "' and docname='Create User' and doc_view=1";
+                                    $result = $conn->query($sql);
+                                    if ($row = $result->fetch()) {
+                                        if ($murl == "ch_psw") {
+                                            echo "<li class='active'>";
+                                        } else {
+                                            echo "<li>";
+                                        }
+                                        echo "<textarea  placeholder=\"Type Your Post\" name=\"description\" id=\"description\" rows=\"5\" cols=\"115\"></textarea>";
+                                    }
+                                    php
+                                    ?>
+
+
+
+
+
+
+
+
+
+
+function refresh() {
+
+    setTimeout(function () {
+        location.reload()
+    }, 100);
+}
+
+
+
+
+
+<button style="display:block; vertical-align:middle; height:2.82em;"
+        title="Cargar nuevamente el código fuente sin darle un [Enter] a la dirección en la barra de direcciones"
+        class="ui-state-active ui-corner-all ui-priority-primary" 
+        onclick="javascript:window.location.reload(true);">
+    <span style="display:inline-block;" class="ui-icon ui-icon-refresh"></span>
+    &nbsp;[<b>CARGAR NUEVAMENTE</b>]&nbsp;
+</button>
+
+
+
+
+
+
